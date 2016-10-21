@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.12.0 (2016-10-21)
+
+  * Add 'error-message' and 'error-code' to update status responses
+
 ## 1.11.0 (2016-08-29)
 
   * Add 'JIDO_API_CUSTOM' env variable for loading custom API code, docs, html

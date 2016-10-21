@@ -283,11 +283,33 @@ Content-Type: application/json
 }
 ```
 
+**Error response**
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+    "status": "failed",
+    "log": "[1432140922][SYSTEM] Failed updating...",
+    "error-message": "Missing update package",
+    "error-code": "E1003"
+}
+```
+
 **Status values**
 
 * `running`: The system update is currently running.
 * `success`: The system update completed successfully.
 * `failed`: The system update failed.
+
+**Error codes**
+
+* `E1000`: There was a scripting error in the update script.
+* `E1001`: There was a version error in the update package.
+* `E1002`: There was an error during the update process.
+* `E1003`: The update package was missing.
+* `E1004`: The update process was already running.
+* `E1005`: The update package couldn't be decrypted or extracted.
 
 ### Viewing the system update log
 
@@ -956,4 +978,4 @@ Content-Type: application/json
 
 ----
 
-**Powered by [Jidoteki](https://jidoteki.com) - [Copyright notices](/docs/NOTICE) - `v1.11.0`**
+**Powered by [Jidoteki](https://jidoteki.com) - [Copyright notices](/docs/NOTICE) - `v1.12.0`**
